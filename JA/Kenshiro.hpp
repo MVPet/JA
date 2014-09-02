@@ -6,14 +6,9 @@
 class Kenshiro : public Character
 {
 public:
-	Kenshiro();
+	Kenshiro(sf::Vector2f spawn);
 	void update(sf::Time deltaTime);
-	void render(sf::RenderWindow* window);
-	void load();
-
-private:
-	std::string name;
-	Animation* anim;
+	void processEvents(sf::Keyboard::Key key, bool value);
 };
 
 #endif // Kenshiro.hpp

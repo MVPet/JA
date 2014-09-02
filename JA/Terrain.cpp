@@ -16,5 +16,8 @@ void Terrain::load(std::string arenaName, std::string terrainType, sf::Vector2f 
 	sprite.setOrigin(0, texture.getSize().y);
 	sprite.setPosition(position);
 
-	boundBox = sf::FloatRect(position.x, position.y,  (float)texture.getSize().x, (float)texture.getSize().y * yBoxRatio);
+	boundBox = sf::FloatRect(position.x, position.y - ((float)texture.getSize().y * yBoxRatio),  (float)texture.getSize().x, (float)texture.getSize().y * yBoxRatio);
 }
+
+sf::FloatRect Terrain::getBoundBox()
+{ return boundBox; }
