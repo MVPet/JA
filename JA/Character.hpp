@@ -15,8 +15,8 @@ class Character
 public:
 	virtual void	update(sf::Time deltaTime)=0;
 	virtual void	processEvents(sf::Keyboard::Key key, bool value)=0;
+	virtual void	load()=0;
 	void			render(sf::RenderWindow* window);
-	void			load();
 	void			applyFlip();
 
 	int				getHealth();
@@ -25,6 +25,11 @@ public:
 	void			setGrounded(bool value);
 
 protected:
+	virtual void	NeutralLight()=0;
+	virtual void	SideLight()=0;
+	virtual void	DownLight()=0;
+	virtual void	UpLight()=0;
+
 	int					health;
 	bool				grounded;
 	States::ID			state;
@@ -51,8 +56,6 @@ protected:
 	sf::Vector2f		velocity;
 	sf::Vector2f		position;
 	sf::FloatRect		groundBox;
-
-	sf::RectangleShape	temp;
 };
 
 #endif // Character.hpp

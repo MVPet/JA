@@ -8,10 +8,12 @@ const std::string Animations::Guard = "Guard";
 const std::string Animations::Stand = "Stand";
 const std::string Animations::Run = "Run";
 
-Animation::Animation(std::string charName, std::string animName, int frameAmount) : updateTime(0.0), frameIndex(0), frameTime(.3f)
+Animation::Animation(std::string charName, std::string animName, std::vector<AnimFrame*> fData, bool repeat) : updateTime(0.0), frameIndex(0), isDone(false)
 {
-	numOfFrames = frameAmount;
+	frameData = fData;
+	numOfFrames = frameData.size();
 	name = animName;
+	loop = repeat;
 	load(charName);
 }
 
@@ -19,16 +21,22 @@ void Animation::update(sf::Time deltaTime, sf::Vector2f position)
 {
 	updateTime += deltaTime.asSeconds();
 
-	if(updateTime >= frameTime)
+	if(!isDone && updateTime >= frameData[frameIndex]->getFrameTime())
 	{
 		frameIndex++;
 		updateTime = 0.0f;
 
 		if(frameIndex >= numOfFrames)
 		{
-			frameIndex = 0;
+			if(loop)
+				frameIndex = 0;
+			else
+			{
+				isDone = true;
+				frameIndex--;
+			}
 		}
-
+			
 		sprite.setTextureRect(sf::IntRect(frameIndex * frameWidth, 0, frameWidth, frameHeight));
 	}
 
@@ -36,12 +44,20 @@ void Animation::update(sf::Time deltaTime, sf::Vector2f position)
 }
 
 void Animation::render(sf::RenderWindow* window)
+{ window->draw(sprite); }
+
+void Animation::reset()
 {
-	window->draw(sprite);
+	updateTime = 0.0;
+	frameIndex = 0;
+	isDone = false;
 }
 
-sf::Vector2f Animation::getFrameSize()
-{ return sf::Vector2f(frameWidth, frameHeight); }
+sf::Vector2i Animation::getFrameSize()
+{ return sf::Vector2i(frameWidth, frameHeight); }
+
+bool Animation::getIsDone()
+{ return isDone; }
 
 void Animation::load(std::string charName)
 {

@@ -86,6 +86,7 @@
   <ItemGroup>
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="AnimationHolder.cpp" />
+    <ClCompile Include="AnimFrame.cpp" />
     <ClCompile Include="Arena.cpp" />
     <ClCompile Include="Battle.cpp" />
     <ClCompile Include="Character.cpp" />
@@ -101,6 +102,7 @@
   <ItemGroup>
     <ClInclude Include="Animation.hpp" />
     <ClInclude Include="AnimationHolder.hpp" />
+    <ClInclude Include="AnimFrame.hpp" />
     <ClInclude Include="Arena.hpp" />
     <ClInclude Include="Battle.hpp" />
     <ClInclude Include="Character.hpp" />

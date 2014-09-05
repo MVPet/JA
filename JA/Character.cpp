@@ -5,7 +5,7 @@ void Character::render(sf::RenderWindow* window)
 	currentAnimation->render(window);
 }
 
-void Character::load()
+/*void Character::load()
 {
 	//anim = new Animation(name, Animations::Stand, 4);
 	animations.load(name, Animations::Stand, 4);
@@ -19,7 +19,7 @@ void Character::load()
 	currentAnimation = animations.get(Animations::Stand);
 
 	groundBox = sf::FloatRect(0, currentAnimation->getFrameSize().y, currentAnimation->getFrameSize().x, 10);
-}
+}*/
 
 int Character::getHealth()
 { return health; }
@@ -35,5 +35,5 @@ void Character::setGrounded(bool value)
 
 void Character::applyFlip()
 {
-	currentAnimation->setScale(flip, 1.f);
+	currentAnimation->setScale((float)flip, 1.f);
 }

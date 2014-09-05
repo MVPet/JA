@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Fighters">
       <UniqueIdentifier>{a42ea4ab-c4b5-4957-8df9-9e10b2d85564}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Bases">
+      <UniqueIdentifier>{4d479d03-3110-4b98-a05e-a1181ac837af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Bases">
+      <UniqueIdentifier>{fc2ad0d1-c686-4863-b9cd-b9885b05d821}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -45,9 +51,6 @@
     <ClCompile Include="Tags.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Arena.cpp">
-      <Filter>Source Files\Stages</Filter>
-    </ClCompile>
     <ClCompile Include="Train.cpp">
       <Filter>Source Files\Stages</Filter>
     </ClCompile>
@@ -57,12 +60,6 @@
     <ClCompile Include="Platform.cpp">
       <Filter>Source Files\Stages\Parts</Filter>
     </ClCompile>
-    <ClCompile Include="Terrain.cpp">
-      <Filter>Source Files\Stages\Parts</Filter>
-    </ClCompile>
-    <ClCompile Include="Character.cpp">
-      <Filter>Source Files\Fighters</Filter>
-    </ClCompile>
     <ClCompile Include="Kenshiro.cpp">
       <Filter>Source Files\Fighters</Filter>
     </ClCompile>
@@ -71,6 +68,18 @@
     </ClCompile>
     <ClCompile Include="AnimationHolder.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Source Files\Bases</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>Source Files\Bases</Filter>
+    </ClCompile>
+    <ClCompile Include="Arena.cpp">
+      <Filter>Source Files\Bases</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -82,9 +91,6 @@
     </ClInclude>
     <ClInclude Include="Tags.hpp">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Arena.hpp">
-      <Filter>Header Files\Stages</Filter>
     </ClInclude>
     <ClInclude Include="Train.hpp">
       <Filter>Header Files\Stages</Filter>
@@ -98,12 +104,6 @@
     <ClInclude Include="Platform.hpp">
       <Filter>Header Files\Stages\Parts</Filter>
     </ClInclude>
-    <ClInclude Include="Terrain.hpp">
-      <Filter>Header Files\Stages\Parts</Filter>
-    </ClInclude>
-    <ClInclude Include="Character.hpp">
-      <Filter>Header Files\Fighters</Filter>
-    </ClInclude>
     <ClInclude Include="Kenshiro.hpp">
       <Filter>Header Files\Fighters</Filter>
     </ClInclude>
@@ -112,6 +112,18 @@
     </ClInclude>
     <ClInclude Include="AnimationHolder.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.hpp">
+      <Filter>Header Files\Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.hpp">
+      <Filter>Header Files\Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimFrame.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Arena.hpp">
+      <Filter>Header Files\Bases</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

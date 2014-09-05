@@ -1,8 +1,8 @@
 #ifndef _ANIMATION
 #define _ANIMATION
 
-#include <SFML/Graphics.hpp>
 #include <string>
+#include "AnimFrame.hpp"
 
 namespace Animations
 {
@@ -18,30 +18,31 @@ namespace Animations
 class Animation
 {
 public:
-					Animation(std::string charName, std::string animName, int frameAmount);
+					Animation(std::string charName, std::string animName, std::vector<AnimFrame*> frameData, bool repeat);
 	void			update(sf::Time deltaTime, sf::Vector2f position);
 	void			render(sf::RenderWindow* window);
+	void			reset();
 
-	sf::Vector2f	getFrameSize();
+	sf::Vector2i	getFrameSize();
+	bool			getIsDone();
 
 	void			setScale(float x, float y);
 
 private:
 	void			load(std::string charName);
 
-	std::string		name;
-	sf::Texture		texture;
-	sf::Sprite		sprite;
+	std::string				name;
+	std::vector<AnimFrame*> frameData;
+	sf::Texture				texture;
+	sf::Sprite				sprite;
 
-	sf::FloatRect	attackBox;
-	sf::FloatRect	boundBox;
-	int				frameIndex;
-	int				numOfFrames;
-	float			updateTime;
-	float			frameTime;
-	bool			loop;
-	int				frameWidth;
-	int				frameHeight;
+	int						frameIndex;
+	int						numOfFrames;
+	float					updateTime;
+	bool					loop;
+	bool					isDone;
+	int						frameWidth;
+	int						frameHeight;
 };
 
 #endif // Animation.hpp

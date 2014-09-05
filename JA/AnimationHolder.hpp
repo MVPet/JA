@@ -8,7 +8,8 @@
 class AnimationHolder
 {
 public:
-	void		load(std::string charName, std::string animName, int frameAmount);
+	void		load(std::string charName, std::string name, std::vector<AnimFrame*> fData, bool loop);
+	//void		load(Animation* animation, std::string name);
 	Animation*	get(std::string name);
 
 private:
