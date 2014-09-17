@@ -1,7 +1,16 @@
-#include "Game.hpp"
+#include "Application.hpp"
+
+#include <iostream>
 
 int main()
 {
-	Game game;
-	game.run();
+	try
+	{
+		Application app;
+		app.run();
+	}
+	catch (std::exception& e)
+	{
+		std::cout << "\nEXCEPTION: " << e.what() << std::endl;
+	}
 }

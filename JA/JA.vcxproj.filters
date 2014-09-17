@@ -13,117 +13,101 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Stages">
-      <UniqueIdentifier>{acbfb124-7638-450f-871c-8121815cc0aa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Stages">
-      <UniqueIdentifier>{7a4083b6-c415-464a-851a-2d30276dfb4f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Stages\Parts">
-      <UniqueIdentifier>{0b4a653b-835a-4998-9309-9fc2e8293cc3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Stages\Parts">
-      <UniqueIdentifier>{58c453f4-fceb-4fd4-94cb-56c37b935a7a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Fighters">
-      <UniqueIdentifier>{2ad5eeff-a633-4343-8545-6ba5a8c3a6f7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Fighters">
-      <UniqueIdentifier>{a42ea4ab-c4b5-4957-8df9-9e10b2d85564}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Bases">
-      <UniqueIdentifier>{4d479d03-3110-4b98-a05e-a1181ac837af}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Bases">
-      <UniqueIdentifier>{fc2ad0d1-c686-4863-b9cd-b9885b05d821}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
+    <ClCompile Include="Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Battle.cpp">
+    <ClCompile Include="StateStack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Tags.cpp">
+    <ClCompile Include="State.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Train.cpp">
-      <Filter>Source Files\Stages</Filter>
-    </ClCompile>
-    <ClCompile Include="Ground.cpp">
-      <Filter>Source Files\Stages\Parts</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform.cpp">
-      <Filter>Source Files\Stages\Parts</Filter>
-    </ClCompile>
-    <ClCompile Include="Kenshiro.cpp">
-      <Filter>Source Files\Fighters</Filter>
-    </ClCompile>
-    <ClCompile Include="Animation.cpp">
+    <ClCompile Include="TitleState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AnimationHolder.cpp">
+    <ClCompile Include="LoadingState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Character.cpp">
-      <Filter>Source Files\Bases</Filter>
-    </ClCompile>
-    <ClCompile Include="AnimFrame.cpp">
+    <ClCompile Include="ParallelTask.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Terrain.cpp">
-      <Filter>Source Files\Bases</Filter>
+    <ClCompile Include="MenuState.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Arena.cpp">
-      <Filter>Source Files\Bases</Filter>
+    <ClCompile Include="PauseState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneNode.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.hpp">
+    <ClInclude Include="Application.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Battle.hpp">
+    <ClInclude Include="StateStack.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Tags.hpp">
+    <ClInclude Include="State.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Train.hpp">
-      <Filter>Header Files\Stages</Filter>
-    </ClInclude>
-    <ClInclude Include="StageList.hpp">
-      <Filter>Header Files\Stages</Filter>
-    </ClInclude>
-    <ClInclude Include="Ground.hpp">
-      <Filter>Header Files\Stages\Parts</Filter>
-    </ClInclude>
-    <ClInclude Include="Platform.hpp">
-      <Filter>Header Files\Stages\Parts</Filter>
-    </ClInclude>
-    <ClInclude Include="Kenshiro.hpp">
-      <Filter>Header Files\Fighters</Filter>
-    </ClInclude>
-    <ClInclude Include="Animation.hpp">
+    <ClInclude Include="StateIdentifiers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AnimationHolder.hpp">
+    <ClInclude Include="ResourceIdentifiers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Terrain.hpp">
-      <Filter>Header Files\Bases</Filter>
-    </ClInclude>
-    <ClInclude Include="Character.hpp">
-      <Filter>Header Files\Bases</Filter>
-    </ClInclude>
-    <ClInclude Include="AnimFrame.hpp">
+    <ClInclude Include="ResourceHolder.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Arena.hpp">
-      <Filter>Header Files\Bases</Filter>
+    <ClInclude Include="TitleState.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Utility.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingState.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParallelTask.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseState.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="World.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneNode.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResourceHolder.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="Utility.inl">
+      <Filter>Header Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
