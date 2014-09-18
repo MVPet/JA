@@ -10,7 +10,7 @@ namespace sf
 namespace Textures
 {
 	enum ID
-	{ Eagle, Raptor, Desert, TitleScreen };
+	{ Kenshiro, TitleScreen };
 }
 
 namespace Fonts

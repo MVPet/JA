@@ -2,8 +2,8 @@
 #define _GAMESTATE
 
 #include "State.hpp"
-//#include "World.hpp"
-//#include "Player.hpp"
+#include "World.hpp"
+#include "Player.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -18,7 +18,7 @@ public:
 	virtual bool	handleEvent(const sf::Event& event);
 
 private:
-	//World		mWorld;
+	World		mWorld;
 };
 
 #endif // GameState.hpp
