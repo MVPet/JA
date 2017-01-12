@@ -1,0 +1,8 @@
+title: Jump Arena
+description: A Battle Arena Fighitng Game Experiment
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-midnight
+
+gems:
+  - jekyll-mentions
